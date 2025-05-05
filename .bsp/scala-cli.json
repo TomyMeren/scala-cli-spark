@@ -1,0 +1,20 @@
+{
+  "name": "scala-cli",
+  "argv": [
+    "/opt/homebrew/bin/scala-cli",
+    "bsp",
+    "--json-options",
+    "/Users/tomas/Projects/Personal/PlaySpark/.scala-build/ide-options-v2.json",
+    "--json-launcher-options",
+    "/Users/tomas/Projects/Personal/PlaySpark/.scala-build/ide-launcher-options.json",
+    "--envs-file",
+    "/Users/tomas/Projects/Personal/PlaySpark/.scala-build/ide-envs.json",
+    "/Users/tomas/Projects/Personal/PlaySpark"
+  ],
+  "version": "1.7.1",
+  "bspVersion": "2.1.1",
+  "languages": [
+    "scala",
+    "java"
+  ]
+}
