@@ -221,12 +221,12 @@ object ExclusiveFeatures extends App {
     ("Divorced", 3)
   ).toDF("state", "score")
 
-  // val scoreByState: IntegerColumn = when[Int]
-  //  .caseW(col[UserState]("state") === Single, col[Int]("score") * 2.lit)
-  //  .caseW(col[UserState]("state") === Married.lit, col[Int]("score") * 10.lit)
-  //  .otherwise(col[Int]("score"))
+  val scoreByState: IntegerColumn = when[Int]
+    .caseW(col[UserState]("state") === Single, col[Int]("score") * 2.lit)
+    .caseW(col[UserState]("state") === Married, col[Int]("score") * 10.lit)
+    .otherwise(col[Int]("score"))
 
-  // dfState.select(scoreByState.as("scoreByState")).show(false)
+  dfState.select(scoreByState.as("scoreByState")).show(false)
 
   // No funciona
 

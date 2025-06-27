@@ -1,7 +1,8 @@
 import org.apache.spark.sql.SparkSession
-import doric._
+import org.apache.spark.sql.functions.{col, lit}
+//import doric._
 
-object PlaySpark extends App {
+object SparkHelloWord extends App {
   val spark = SparkSession
     .builder()
     .appName("PlaySpark")
@@ -11,6 +12,6 @@ object PlaySpark extends App {
   import spark.implicits._
 
   val df = Seq(("Alice", 29), ("Bob", 33)).toDF("name", "age")
-  df.show()
+  df.select(col("name"), lit(9)).show()
   spark.stop()
 }
