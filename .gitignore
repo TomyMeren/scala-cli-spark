@@ -1,6 +1,8 @@
 .scala-build/
 .bloop/
 .metals/
+.bsp/
+.reports/
 .ammonite/
 target/
 out/

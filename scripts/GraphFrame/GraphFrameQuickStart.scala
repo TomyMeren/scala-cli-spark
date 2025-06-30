@@ -1,6 +1,9 @@
 import org.apache.spark.sql.SparkSession
 import org.graphframes._
 
+// scala-cli run project.scala scripts/GraphFrame/GraphFrameQuickStart.scala
+// scala-cli run . --main-class GraphFrameQuickStart
+
 object GraphFrameQuickStart extends App {
   val spark = SparkSession
     .builder()
